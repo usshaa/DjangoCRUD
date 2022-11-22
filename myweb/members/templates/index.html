@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Django Framework</title>
+</head>
+<body>
+<!--    <h1>Hello World!</h1>-->
+<!--    <p>Welcome to my first Django project!</p>-->
+    <h1>Members</h1>
+
+    <table border="1">
+    {% for x in mymembers %}
+    <tr>
+    <td>{{ x.id }}</td>
+    <td>{{ x.firstname }}</td>
+    <td>{{ x.lastname }}</td>
+    <td><a href="update/{{ x.id }}"><button type="button">update</button></a></td>
+    <td><a href="delete/{{ x.id }}"><button type="button">delete</button></a></td>
+    </tr>
+    {% endfor %}
+</table>
+<a href="add/"><button type="button">Add Member </button></a>
+</body>
+</html>
